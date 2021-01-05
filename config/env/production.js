@@ -38,7 +38,7 @@ module.exports = {
     db: 4,
     prefix: 'prod_sess:',
     cookie: {
-      // secure: true,
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,
     },
   },
@@ -63,8 +63,5 @@ module.exports = {
   },
   log: {
     level: 'debug'
-  },
-  http: {
-    cache: 365.25 * 24 * 60 * 60 * 1000,
   },
 };
