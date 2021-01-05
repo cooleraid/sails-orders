@@ -3,7 +3,6 @@
  */
 const jwt = require('jsonwebtoken')
 const { secret } = sails.config.settings.jwt;
-console.log(secret)
 module.exports = async (req, res, next) => {
   if (req.headers.authorization?.split(' ')[0].toLowerCase() !== 'jwt') return res.status(401).json({ status: "error", message: "No authorization header was found.", data: false });
   const token = req.headers.authorization?.split(' ')[1]
