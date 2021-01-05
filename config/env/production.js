@@ -29,7 +29,7 @@ module.exports = {
     },
   },
   models: {
-    migrate: 'alter',
+    migrate: 'safe',
   },
   session: {
     adapter: '@sailshq/connect-redis',
