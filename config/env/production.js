@@ -33,8 +33,9 @@ module.exports = {
   },
   session: {
     adapter: '@sailshq/connect-redis',
-    host: '127.0.0.1',
-    port: '6379',
+    url: process.env.REDIS_URL,
+    // host: '127.0.0.1',
+    // port: '6379',
     db: 4,
     prefix: 'prod_sess:',
     cookie: {
@@ -44,8 +45,9 @@ module.exports = {
   },
   sockets: {
     adapter: '@sailshq/socket.io-redis',
-    host: '127.0.0.1',
-    port: '6379',
+    url: process.env.REDIS_URL,
+    // host: '127.0.0.1',
+    // port: '6379',
     db: 5,
   },
   settings: {
